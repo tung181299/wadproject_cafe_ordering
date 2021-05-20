@@ -13,6 +13,8 @@ const cors = require('cors');               // preventing cors error
 
 const mongooseUri = require('./util/database');
 
+const authRoutes = require('./routes/auth');
+
 const app = express();
 
 const accessLogStream = fs.createWriteStream(
@@ -40,6 +42,8 @@ app.use((req, res, next) => {
   );
   next();
 });
+
+app.use(authRoutes);
 
 app.use((req, res) => {
   const { error } = req;
