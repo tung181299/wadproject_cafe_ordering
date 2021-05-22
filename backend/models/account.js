@@ -28,11 +28,10 @@ const accountSchema = new Schema({
       type: String,
       required: true
     },
-    address1: {
+    address: {
       type: String,
       required: true
     },
-    address2: String,
     ward: {
       type: String,
       required: true
@@ -59,11 +58,15 @@ const accountSchema = new Schema({
       type: String,
       required: true
     },
-    pinNumber: {
+    cvcNumber: {
       type: String,
       required: true
     },
     expireTime: {
+      type: String,
+      required: true
+    },
+    region: {
       type: String,
       required: true
     }

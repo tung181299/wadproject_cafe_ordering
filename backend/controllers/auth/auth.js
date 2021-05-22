@@ -8,6 +8,31 @@ const {
   createError
 } = require('../../util/error-handler');
 
+exports.addShippingAddress = async (req, res, next) => {
+  try {
+    const errors = validationResult(req);
+    if (!errors.isEmpty())
+      throw createError('Validation failed D:', 422, errors.array());
+
+    const { placeId, address, ward, district, city, phone } = req.body;
+    const newAddress = { placeId, address, ward, district, city, phone };
+
+    const acc = await Account.findById(req.userId);
+    if (!acc)
+      throw createError('Account not found D:', 401);
+
+    acc.shipAddresses.push(newAddress);
+    await acc.save();
+
+    res.status(201).json({
+      message: 'Added new shipping address :D',
+      newAddress
+    });
+  } catch (error) {
+    errorHandler(req, error, next);
+  }
+};
+
 exports.login = async (req, res, next) => {
   try {
     const errors = validationResult(req);
@@ -27,7 +52,8 @@ exports.login = async (req, res, next) => {
     const token = jwt.sign(
       {
         email: acc.email,
-        userId: acc._id.toString()
+        userId: acc._id.toString(),
+        isAdmin: acc.isAdmin
       },
       'asecretprivatekey',
       { expiresIn: '24h' }
