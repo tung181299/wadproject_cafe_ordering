@@ -19,7 +19,7 @@ function Homepage() {
               <li><a href="#reservation">RESERVATION</a></li>
               <li><a href="#pages">PAGES</a></li>
               <li><a href="#">SHOP</a></li>
-              <li><a href="login.html">LOGIN</a></li>
+              <li><a href="login">LOGIN</a></li>
               <li><a href="Register.js">REGISTER</a></li>
               <li><a href="#contact">CONTACT</a></li>
             </ul>
