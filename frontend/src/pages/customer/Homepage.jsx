@@ -143,6 +143,59 @@ function Homepage() {
             </div>
           </div>
         </section>
+        <section className="blog">
+        <div className="blog__title">
+          <p>OUR NEWS &amp; ARTICLES</p>
+          <h1>LATEST BLOG POSTS</h1>
+          <p>We are committed to providing our customers with exceptional service while offering our
+            employees the best training.
+          </p>
+        </div>
+        <div className="blog__content">
+          <div className="blog__item blog__gallery1">
+            <img src="./img/home-1-gallery-1.jpg" alt="" />
+            <div className="blog__text">
+              <p>May 21, 2021 | Life Style</p>
+              <h3>1950s up to now Pop Music Defined</h3>
+            </div>
+          </div>
+          <div className="blog__item">
+            <img src="./img/home-1-gallery-2-550x550.jpg" alt="" />
+            <div className="blog__text">
+              <p>May 21, 2021 | Life Style</p>
+              <h3>1950s up to now Best Coffee Defined</h3>
+            </div>
+          </div>
+          <div className="blog__item blog__gallery4">
+            <img src="./img/home-1-gallery-4-500x1000.jpg" alt="" />
+            <div className="blog__text">
+              <p>May 21, 2021 | Life Style</p>
+              <h3>1950s up to now Best Coffee Defined</h3>
+            </div>
+          </div>
+          <div className="blog__item">
+            <img src="./img/home-1-gallery-6-550x550.jpg" alt="" />
+            <div className="blog__text">
+              <p>May 21, 2021 | Life Style</p>
+              <h3>1950s up to now Best Coffee Defined</h3>
+            </div>
+          </div>
+          <div className="blog__item">
+            <img src="./img/home-1-gallery-3-550x550.jpg" alt="" />
+            <div className="blog__text">
+              <p>May 21, 2021 | Life Style</p>
+              <h3>1950s up to now Best Coffee Defined</h3>
+            </div>
+          </div>
+          <div className="blog__item">
+            <img src="./img/home-1-gallery-5-550x550.jpg" alt="" />
+            <div className="blog__text">
+              <p>May 21, 2021 | Life Style</p>
+              <h3>1950s up to now Best Coffee Defined</h3>
+            </div>
+          </div>
+        </div>
+      </section>
         <section className="contact" id="contact">
           <div className="opening-hours">
             <h1>OPENING HOURS</h1><br /><br />
