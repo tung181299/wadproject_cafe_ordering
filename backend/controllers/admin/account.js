@@ -7,6 +7,18 @@ const {
   createError
 } = require('../../util/error-handler');
 
+exports.getAccounts = async (req, res, next) => {
+  try {
+    const accounts = await Account.find();
+    res.status(200).json({
+      message: 'Fetched accounts :D',
+      accounts
+    });
+  } catch (error) {
+    errorHandler(req, error, next);
+  }
+};
+
 exports.createAdminAccount = async (req, res, next) => {
   try {
     const errors = validationResult(req);

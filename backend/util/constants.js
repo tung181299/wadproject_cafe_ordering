@@ -27,5 +27,19 @@ module.exports = {
   ACCOUNT_ADDRESS_PLACE_ID_SAMPLES: {
     'HOME': 'Home',
     'WORK': 'Work'
+  },
+  ORDER_TYPES: {
+    'IN_STORE':'In Store',
+    'SHIP': 'Ship',
+    'TAKE_AWAY': 'Take Away'
+  },
+  ORDER_STATUSES: {
+    'PENDING': 'Pending',
+    'ON_WAIT': 'On Wait',
+    'COMPLETED': 'Completed'
+  },
+  DISCOUNT_ONS: {
+    'SHIPPING': 'Shipping',
+    'TOTAL': 'Total'
   }
 };
